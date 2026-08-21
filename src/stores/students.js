@@ -84,7 +84,7 @@ export const useStudentsStore = defineStore('students', () => {
       enrolledAt: new Date().toLocaleDateString('es-CL')
     }
 
-    students.value.push(newStudent)
+    students.value.unshift(newStudent)
     saveToStorage()
   }
 
